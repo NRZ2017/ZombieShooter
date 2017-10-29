@@ -31,7 +31,7 @@ namespace NickZombieGame
         int ZombieCount;
         SpriteFont Font1;
         Texture2D Heart;
-        int HeartCount;
+        int HeartCount = 3;
 
         TimeSpan spawnTimer = TimeSpan.Zero;
         TimeSpan spawnTime = TimeSpan.FromMilliseconds(1000);
@@ -116,6 +116,7 @@ namespace NickZombieGame
             ms = Mouse.GetState();
             ks = Keyboard.GetState();
 
+
             spawnTimer += gameTime.ElapsedGameTime;
             if (spawnTimer > spawnTime)
             {
@@ -143,6 +144,7 @@ namespace NickZombieGame
                     }
                 }
             }
+            
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -165,11 +167,35 @@ namespace NickZombieGame
             AimReticle.Draw(spriteBatch);
            
             spriteBatch.DrawString(Font1, $"Score:{ZombieCount}", new Vector2(GraphicsDevice.Viewport.Bounds.Width -Font1.MeasureString($"Score{ZombieCount}").X - 30, 0) , Color.Black);
-            
-            spriteBatch.Draw(Heart, new Rectangle(20, 20, 100, 100), Color.White);
-            spriteBatch.Draw(Heart, new Rectangle(100, 20, 100, 100), Color.White);
-            spriteBatch.Draw(Heart, new Rectangle(180, 20, 100, 100), Color.White);
-            
+            for (int i = 0; i < zombie.Count; i++)
+            {
+                if (survivor.Hitbox.Intersects(zombie[i].Hitbox))
+                {
+                    HeartCount--;
+                    zombie.Remove(zombie[i]);
+                }
+            }
+            switch(HeartCount)
+            {
+                case 1:
+                    spriteBatch.Draw(Heart, new Rectangle(20, 20, 100, 100), Color.White);
+                    break;
+
+                case 2:
+                    spriteBatch.Draw(Heart, new Rectangle(20, 20, 100, 100), Color.White);
+                    spriteBatch.Draw(Heart, new Rectangle(100, 20, 100, 100), Color.White);
+                    break;
+
+                case 3:
+                    spriteBatch.Draw(Heart, new Rectangle(20, 20, 100, 100), Color.White);
+                    spriteBatch.Draw(Heart, new Rectangle(100, 20, 100, 100), Color.White);
+                    spriteBatch.Draw(Heart, new Rectangle(180, 20, 100, 100), Color.White);
+                    break;
+            }
+            if (HeartCount == 0)
+            {
+                Exit();
+            }
             spriteBatch.End();
             base.Draw(gameTime);
         }

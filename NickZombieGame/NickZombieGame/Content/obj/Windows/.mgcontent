@@ -4,12 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/Aim.png</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/Background.jpg</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/zombie.png</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/BulletMegaE433.png</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/pistol.png</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/Font.spritefont</File>
-    <File>C:/Users/VisitorDL8/Documents/Visual Studio 2017/Projects/NickZombieGame/NickZombieGame/Content/McHeart.png</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/Aim.png</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/Background.jpg</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/zombie.png</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/BulletMegaE433.png</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/pistol.png</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/Font.spritefont</File>
+    <File>C:/Users/VisitorDL8/Documents/GitHub/ZombieShooter/NickZombieGame/NickZombieGame/Content/McHeart.png</File>
   </SourceFiles>
 </SourceFileCollection>
